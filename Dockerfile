@@ -5,5 +5,6 @@ LABEL name="LIGO Software Environment for Debian Jessie" \
       date="20170605" \
       support="Reference Platform"
 
-RUN apt-get --assume-yes install ldg-client \
-      lscsoft-all
+RUN apt-get update && \
+      apt-get --assume-yes install ldg-client lscsoft-all && \
+      rm -rf /var/lib/apt/lists/*
