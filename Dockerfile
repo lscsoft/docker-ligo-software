@@ -8,4 +8,4 @@ LABEL name="LIGO Software Environment for Enterprise Linux 7" \
 RUN yum -y install ldg-client \
       lscsoft-all
 
-RUN yum clear all
+RUN yum clean all
