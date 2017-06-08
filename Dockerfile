@@ -1,4 +1,4 @@
-FROM ligo/software:jessie
+FROM ligo/base:jessie-proposed
 
 LABEL name="LIGO Software Environment for Debian Jessie" \
       maintainer="Adam Mercer <adam.mercer@ligo.org>" \
@@ -6,6 +6,5 @@ LABEL name="LIGO Software Environment for Debian Jessie" \
       support="Reference Platform"
 
 RUN apt-get update && \
-    apt-get upgrade && \
-    apt-get dist-upgrade && \
+    apt-get install lscsoft-all && \
     rm -rf /var/lib/apt/lists/*
