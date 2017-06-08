@@ -6,5 +6,5 @@ LABEL name="LIGO Software Environment for Debian Jessie" \
       support="Reference Platform"
 
 RUN apt-get update && \
-    apt-get install lscsoft-all && \
+    apt-get install --assume-yes lscsoft-all && \
     rm -rf /var/lib/apt/lists/*
