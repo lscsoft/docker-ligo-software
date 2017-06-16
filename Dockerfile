@@ -1,4 +1,4 @@
-FROM ligo/base:stretch
+FROM ligo/base:stretch-proposed
 
 LABEL name="LIGO Software Environment for Debian Jessie" \
       maintainer="Adam Mercer <adam.mercer@ligo.org>" \
