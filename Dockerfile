@@ -2,7 +2,7 @@ FROM ligo/base:stretch
 
 LABEL name="LIGO Software Environment for Debian Jessie" \
       maintainer="Adam Mercer <adam.mercer@ligo.org>" \
-      date="20170616" \
+      date="20180131" \
       support="Reference Platform"
 
 RUN apt-get update \
@@ -10,4 +10,5 @@ RUN apt-get update \
       build-essential \
       ccache \
       clang \
+      lscsoft-all \
     && rm -rf /var/lib/apt/lists/*
