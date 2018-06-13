@@ -14,12 +14,15 @@ RUN apt-get update \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
+# See Intel docs for using Intel Python build via conda
+# https://software.intel.com/en-us/articles/using-intel-distribution-for-python-with-anaconda
 RUN apt-get -qq update && apt-get -qq -y install curl bzip2 \
     && curl -sSL https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -o /tmp/miniconda.sh \
     && bash /tmp/miniconda.sh -bfp /usr/local \
     && rm -rf /tmp/miniconda.sh \
     && conda install -y python=3 \
     && conda update conda \
+    && conda config --add channels intel \
     && apt-get -qq -y autoremove \
     && apt-get autoclean \
     && rm -rf /var/lib/apt/lists/* /var/log/dpkg.log \
