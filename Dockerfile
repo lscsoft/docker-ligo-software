@@ -1,8 +1,8 @@
-FROM containers.ligo.org/docker/base:stretch
+FROM containers.ligo.org/docker/base:buster
 
-LABEL name="LIGO Software Environment for Debian Stretch" \
+LABEL name="LIGO Software Environment for Debian Buster" \
       maintainer="Adam Mercer <adam.mercer@ligo.org>" \
-      date="20190830" \
+      date="20190909" \
       support="Reference Platform"
 
 RUN apt-get update \
