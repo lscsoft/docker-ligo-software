@@ -6,6 +6,7 @@ variables:
 
 stages:
   - docker
+  - rebuild
 
 docker:build:
   stage: docker
@@ -22,3 +23,17 @@ docker:build:
           docker push $REPOSITORY:$CI_COMMIT_REF_NAME
           docker logout
         fi
+
+#
+# trigger rebuilds of downstream containers
+#
+
+# ligo-shell
+
+rebuild:shell:
+  stage: rebuild
+  only:
+    - branches@docker/software
+  trigger:
+    project: docker/shell
+    branch: el7
