@@ -2,7 +2,7 @@
 image: docker:latest
 
 variables:
-  REPOSITORY: 'cgca/ligo-software'
+  REPOSITORY: 'igwn/ligo-software'
 
 stages:
   - docker
