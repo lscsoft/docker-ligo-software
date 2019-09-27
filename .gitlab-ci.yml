@@ -37,3 +37,13 @@ rebuild:shell:
   trigger:
     project: docker/shell
     branch: stretch
+
+# ligo-gsisshd
+
+rebuild:gsisshd:
+  stage: rebuild
+  only:
+    - branches@docker/software
+  trigger:
+    project: docker/gsisshd
+    branch: stretch
