@@ -1,4 +1,4 @@
-FROM containers.ligo.org/docker/base:stretch-proposed
+FROM igwn/base:stretch-proposed
 
 LABEL name="LIGO Software Environment for Debian Stretch" \
       maintainer="Adam Mercer <adam.mercer@ligo.org>" \
