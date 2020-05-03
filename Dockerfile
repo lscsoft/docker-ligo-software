@@ -1,9 +1,8 @@
-FROM containers.ligo.org/docker/base:buster
+FROM igwn/base:buster
 
 LABEL name="LIGO Software Environment for Debian Buster" \
       maintainer="Adam Mercer <adam.mercer@ligo.org>" \
-      date="20190909" \
-      support="Reference Platform"
+      support="Best Effort"
 
 RUN apt-get update \
     && apt-get --assume-yes install \
