@@ -4,7 +4,7 @@ LABEL name="LIGO Software Environment for Enterprise Linux 7" \
       maintainer="Adam Mercer <adam.mercer@ligo.org>" \
       support="Reference Platform"
 
-RUN yum -y install \\
+RUN yum -y install \
       ccache \
       clang \
       lscsoft-all && \
