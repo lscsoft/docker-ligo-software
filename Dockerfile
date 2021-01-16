@@ -1,8 +1,8 @@
 FROM igwn/base:buster
 
-LABEL name="LIGO Software Environment for Debian Buster" \
-      maintainer="Adam Mercer <adam.mercer@ligo.org>" \
-      support="Best Effort"
+LABEL name="LIGO Software Environment for Debian Buster"
+LABEL maintainer="Adam Mercer <adam.mercer@ligo.org>"
+LABEL support="Best Effort"
 
 RUN apt-get update \
     && apt-get --assume-yes install \
