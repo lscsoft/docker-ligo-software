@@ -1,9 +1,8 @@
 FROM igwn/base:stretch-proposed
 
-LABEL name="LIGO Software Environment for Debian Stretch" \
-      maintainer="Adam Mercer <adam.mercer@ligo.org>" \
-      date="20190909" \
-      support="Reference Platform"
+LABEL name="LIGO Software Environment for Debian Stretch"
+LABEL maintainer="Adam Mercer <adam.mercer@ligo.org>"
+LABEL support="Reference Platform"
 
 RUN apt-get update && \
     apt-get --assume-yes install \
